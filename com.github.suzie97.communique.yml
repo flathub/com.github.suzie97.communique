@@ -122,5 +122,5 @@ modules:
     sources:
       - type: archive
         url: https://github.com/Suzie97/Communique/archive/refs/tags/v1.1.4.tar.gz
-        sha256: 52f2aec6a54ea4e104f25e8a32f891d0a0a795cedad233ab491c72be1c9824e2
+        sha256: 2c8d6f79f915948276ed0fab682b6e96a8f0c14361a019614278d259bbff53ff
         
