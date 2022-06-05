@@ -121,6 +121,6 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/Suzie97/Communique/archive/refs/tags/v1.1.4.tar.gz
-        sha256: 2c8d6f79f915948276ed0fab682b6e96a8f0c14361a019614278d259bbff53ff
+        url: https://github.com/Suzie97/Communique/archive/refs/tags/v1.2.0.tar.gz
+        sha256: 58cd1da08ca7ea65ab6386b8d6cdb0069b081a43cff3cb4af692a9917342fb6b
         
