@@ -108,7 +108,7 @@ modules:
   - name: gnome-online-accounts
     sources:
     - type: archive
-      url: https://download-fallback.gnome.org/sources/gnome-online-accounts/3.40/gnome-online-accounts-3.40.0.tar.xz
+      url: https://download.gnome.org/sources/gnome-online-accounts/3.40/gnome-online-accounts-3.40.0.tar.xz
       sha256: 585c4f979f6f543b77bfdb4fb01eb18ba25c2aec5b7866c676d929616fb2c3fa
 
   - name: gumbo
@@ -122,5 +122,9 @@ modules:
     sources:
       - type: archive
         url: https://github.com/Suzie97/Communique/archive/refs/tags/v1.2.0.tar.gz
-        sha256: 58cd1da08ca7ea65ab6386b8d6cdb0069b081a43cff3cb4af692a9917342fb6b
-        
+        sha256: b603ee2414d7773522145ec4cd22c539d0bfee0aacacb115e3b8aec760dca5c5
+    post-install:
+      # workaround for non-png-icon-in-hicolor-size-folder lint error
+      - mkdir -p /app/share/icons/hicolor/scalable/apps
+      - mv /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - find /app/share/icons/hicolor -type f -not -path "*scalable*" -not -path "*actions*" -name "*.svg" -delete
